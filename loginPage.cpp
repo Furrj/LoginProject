@@ -15,11 +15,15 @@ void loginPage() {
 
 	std::ifstream read("/home/fratersks/Documents/loginProfiles/" + username + ".txt");
 	getline(read, un);
+	getline(read, pn);
 
-	if (read) {
-		std::cout << un;
-	} else {
+	if (read && pn == password) {
+		std::cout << "Welcome, " << un << ", you are logged in" << std::endl;
+	} else if (!read){
 		std::cout << "No user found, please retry" << std::endl;
+		loginPage();
+	} else if (read && pn != password) {
+		std::cout << "Password incorrect, please retry" << std::endl;
 		loginPage();
 	}
 }

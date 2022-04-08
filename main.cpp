@@ -17,9 +17,8 @@ int main() {
 		loginPage();
 	} else if (logNum == 2 && initOver == true) {
 		registerPage();
+		loginPage();
 	}
-
-	loginPage();
 
 	return 0;
 }	
