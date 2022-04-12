@@ -25,7 +25,7 @@ void registerPage() {
 	
 	if (passMatch == true) {
 		std::ofstream file;
-		file.open("/home/fratersks/Documents/loginProfiles/" + username + ".txt");
+		file.open("C:\\Users\\jacks\\OneDrive\\Documents\\C++ Project\\" + username + ".txt");
 		file << username << std::endl;
 		file << password << std::endl;
 		file.close();

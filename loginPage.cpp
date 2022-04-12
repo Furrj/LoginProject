@@ -13,7 +13,7 @@ void loginPage() {
 	std::cout << "Enter password: " << std::endl;
 	std::cin >> password;
 
-	std::ifstream read("/home/fratersks/Documents/loginProfiles/" + username + ".txt");
+	std::ifstream read("C:\\Users\\jacks\\OneDrive\\Documents\\C++ Project\\" + username + ".txt");
 	getline(read, un);
 
 	if (read) {
